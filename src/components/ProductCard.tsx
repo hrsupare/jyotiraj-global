@@ -20,26 +20,13 @@ export function ProductCard({ product }: ProductCardProps) {
     <div className="product-card group">
       {/* Image */}
       <Link href={`/product/${product.slug}`} className="block">
-        <div className="product-image-wrapper">
-          {/* Placeholder - replace with actual product photography */}
-          <div className="absolute inset-0 bg-gradient-to-br from-cream to-sand flex items-center justify-center">
-            <div className="text-center px-4">
-              <div className="w-16 h-16 mx-auto mb-2 rounded-full bg-brand-gold/10 flex items-center justify-center">
-                <span className="text-2xl">
-                  {product.category === "laddus"
-                    ? "🟡"
-                    : product.category === "dry-fruits"
-                    ? "🥜"
-                    : product.category === "sweets"
-                    ? "🍬"
-                    : "🎁"}
-                </span>
-              </div>
-              <p className="text-[0.65rem] text-text-muted uppercase tracking-wider">
-                Product Image
-              </p>
-            </div>
-          </div>
+        <div className="product-image-wrapper relative overflow-hidden bg-sand/30 aspect-square">
+          <img
+            src={product.image}
+            alt={product.name}
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            loading="lazy"
+          />
 
           {/* Badge */}
           {product.badge && (
@@ -67,7 +54,7 @@ export function ProductCard({ product }: ProductCardProps) {
       </Link>
 
       {/* Details */}
-      <div className="p-4">
+      <div className="p-3 sm:p-4">
         {/* Category */}
         <p className="text-[0.625rem] tracking-[0.15em] uppercase text-text-muted font-medium mb-1">
           {product.category.replace("-", " ")}
@@ -128,10 +115,10 @@ export function ProductCard({ product }: ProductCardProps) {
         </div>
 
         {/* Wishlist + Add to Cart */}
-        <div className="flex items-center gap-2 mt-3">
+        <div className="flex items-center gap-1.5 sm:gap-2 mt-3">
           <button
             onClick={() => setIsWishlisted(!isWishlisted)}
-            className={`w-9 h-9 flex items-center justify-center border transition-all ${
+            className={`w-8 h-8 sm:w-9 sm:h-9 shrink-0 flex items-center justify-center border transition-all ${
               isWishlisted
                 ? "border-brand-burgundy text-brand-burgundy bg-brand-burgundy/5"
                 : "border-border-light text-text-muted hover:border-brand-burgundy hover:text-brand-burgundy"
@@ -139,11 +126,11 @@ export function ProductCard({ product }: ProductCardProps) {
             aria-label="Add to wishlist"
           >
             <Heart
-              size={14}
+              size={13}
               className={isWishlisted ? "fill-brand-burgundy" : ""}
             />
           </button>
-          <button className="flex-1 h-9 bg-brand-burgundy text-white text-xs font-semibold tracking-[0.08em] uppercase hover:bg-brand-deep transition-colors">
+          <button className="flex-1 h-8 sm:h-9 bg-brand-burgundy text-white text-[0.6875rem] sm:text-xs font-semibold tracking-[0.05em] sm:tracking-[0.08em] uppercase hover:bg-brand-deep transition-colors whitespace-nowrap px-1">
             Add to Cart
           </button>
         </div>

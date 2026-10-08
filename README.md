@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Jyotiraj Global
 
-## Getting Started
+> **Flagship Indian Food & Gifting Brand Website**  
+> Premium dry fruits, traditional laddus, artisanal Indian sweets, and curated gift hampers crafted for every celebration.
 
-First, run the development server:
+---
+
+## ✨ Features & Pages
+
+- **Editorial Homepage (`/`)**: Rich culinary storytelling, royal festive hero banner, interactive category grid, bestsellers showcase, pure ingredient pledge, heritage story, corporate gifting feature, verified customer reviews, and social showcase.
+- **Catalog & Shop (`/shop`)**: Filter by collection (Laddus, Dry Fruits, Sweets, Gift Hampers, Festive, Corporate) with sort options (Featured, Best Selling, Price Low to High, Price High to Low).
+- **Product Detail Pages (`/product/[slug]`)**: Dynamic variant weights (250g, 500g, 1kg), interactive image gallery with thumbnail preview, nutritional details, pure ingredients breakdown, and mobile sticky purchase bar.
+- **Curated Gifting (`/gifting`)**: Bespoke gift hampers for festive celebrations, weddings, family moments, and royal gifting.
+- **Corporate Gifting (`/corporate-gifting`)**: Dedicated corporate catalog, custom volume tiers, personalized branding options, and RFP inquiry forms.
+- **Heritage & Story (`/about`)**: Authentic brand journey, craftsmanship philosophy, and zero-compromise purity standards.
+- **Contact & Bulk Orders (`/contact`)**: Multi-tab inquiry forms for general inquiries, corporate gifting, and distributor bulk orders.
+- **Cart & Order Summary (`/cart`)**: Real-time quantity adjustments, ₹999 free shipping progress indicator, and gift box add-on.
+- **100% Mobile Responsive**: Fluid typography, responsive grids, touch-friendly pill tabs, and slide-out mobile navigation drawer.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js 16](https://nextjs.org/) (App Router & Turbopack)
+- **Language**: TypeScript
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/) with a custom luxury Indian heritage palette (Burgundy, Royal Gold, Saffron, Ivory, Cream)
+- **Typography**: Playfair Display (Serif) & DM Sans / Plus Jakarta Sans (Sans-serif)
+- **Icons**: [Lucide React](https://lucide.dev/) & Custom SVG icons
+- **Animations**: Framer Motion
+
+---
+
+## 🚀 Getting Started
+
+### 1. Install Dependencies
+
+```bash
+npm install
+```
+
+### 2. Run the Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Build for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 📁 Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+├── public/
+│   └── images/
+│       ├── banners/       # Hero, heritage & campaign photography
+│       ├── categories/    # Category collection covers
+│       ├── ingredients/   # Pure ingredient showcase photos
+│       └── products/      # High-res artisanal product photography
+├── src/
+│   ├── app/
+│   │   ├── about/         # Brand story & heritage
+│   │   ├── cart/          # Cart & checkout preview
+│   │   ├── contact/       # Contact & corporate enquiry
+│   │   ├── corporate-gifting/
+│   │   ├── gifting/       # Curated gifting hampers
+│   │   ├── product/[slug]/# Dynamic Product PDP
+│   │   ├── shop/          # Catalog & filters
+│   │   ├── globals.css    # Design tokens & responsive utilities
+│   │   ├── layout.tsx     # Root layout with fonts & metadata
+│   │   └── page.tsx       # Homepage
+│   ├── components/
+│   │   ├── Footer.tsx     # Newsletter & site footer
+│   │   ├── Header.tsx     # Announcement bar, mega menu & mobile drawer
+│   │   ├── ProductCard.tsx# Reusable e-commerce card
+│   │   └── Reveal.tsx     # Scroll-triggered entrance animations
+│   └── data/
+│       └── products.ts    # Product catalog, categories & review data
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 📄 License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Private & Proprietary — © 2026 Jyotiraj Global. All rights reserved.

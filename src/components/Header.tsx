@@ -81,7 +81,7 @@ export function Header() {
   return (
     <>
       {/* Announcement Bar */}
-      <div className="bg-brand-burgundy text-white text-center text-xs tracking-[0.15em] uppercase font-medium py-2 px-4">
+      <div className="bg-brand-burgundy text-white text-center text-[0.6875rem] sm:text-xs tracking-[0.08em] sm:tracking-[0.15em] uppercase font-medium py-1.5 sm:py-2 px-3">
         Premium Indian Flavours&ensp;•&ensp;Crafted for Every Celebration
       </div>
 

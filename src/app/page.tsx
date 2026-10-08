@@ -63,93 +63,86 @@ function HeroSection() {
       </div>
 
       <div className="container-brand relative z-20">
-        <div className="min-h-[85vh] lg:min-h-[90vh] flex items-center">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center w-full py-16 lg:py-0">
+        <div className="min-h-[80vh] lg:min-h-[90vh] flex items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center w-full py-12 lg:py-0">
             {/* Left — Content */}
             <div className="max-w-xl">
-              <p className="text-[0.6875rem] font-semibold tracking-[0.3em] uppercase text-brand-gold mb-4">
+              <p className="text-[0.6875rem] font-semibold tracking-[0.3em] uppercase text-brand-gold mb-3 sm:mb-4">
                 Crafted with Tradition
               </p>
               <h1
-                className="text-4xl sm:text-5xl lg:text-[3.5rem] xl:text-6xl leading-[1.1] text-white"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] xl:text-6xl leading-[1.12] text-white"
                 style={{ fontFamily: "var(--font-playfair), serif" }}
               >
                 Tradition,
                 <br />
                 <span className="text-brand-gold-light">Made to Be Gifted.</span>
               </h1>
-              <div className="w-12 h-[2px] bg-brand-gold mt-6 mb-6" />
-              <p className="text-base lg:text-lg text-white/60 leading-relaxed max-w-md">
+              <div className="w-12 h-[2px] bg-brand-gold mt-4 sm:mt-6 mb-4 sm:mb-6" />
+              <p className="text-sm sm:text-base lg:text-lg text-white/70 leading-relaxed max-w-md">
                 Premium dry fruits, laddus and timeless Indian flavours — crafted
                 for moments worth celebrating.
               </p>
-              <div className="flex flex-wrap gap-3 mt-8">
-                <Link href="/shop" className="btn-primary !bg-brand-saffron hover:!bg-[#be8220]">
+              <div className="flex flex-col sm:flex-row gap-3 mt-6 sm:mt-8">
+                <Link href="/shop" className="btn-primary !bg-brand-saffron hover:!bg-[#be8220] justify-center text-center">
                   Explore Collection
                   <ArrowRight size={15} />
                 </Link>
                 <Link
                   href="/shop?sort=best-selling"
-                  className="btn-secondary !border-white/25 !text-white/80 hover:!bg-white/10 hover:!border-white/40"
+                  className="btn-secondary !border-white/25 !text-white/80 hover:!bg-white/10 hover:!border-white/40 justify-center text-center"
                 >
                   Shop Bestsellers
                 </Link>
               </div>
 
               {/* Trust Indicators */}
-              <div className="flex items-center gap-6 mt-10 pt-8 border-t border-white/10">
+              <div className="grid grid-cols-3 gap-2 sm:gap-6 mt-8 sm:mt-10 pt-6 sm:pt-8 border-t border-white/10 text-center sm:text-left">
                 <div>
-                  <p className="text-xl font-bold text-white" style={{ fontFamily: "var(--font-playfair), serif" }}>
+                  <p className="text-lg sm:text-xl font-bold text-white" style={{ fontFamily: "var(--font-playfair), serif" }}>
                     500+
                   </p>
-                  <p className="text-[0.6875rem] text-white/40 mt-0.5">
+                  <p className="text-[0.625rem] sm:text-[0.6875rem] text-white/50 mt-0.5">
                     Happy Customers
                   </p>
                 </div>
-                <div className="w-px h-10 bg-white/10" />
-                <div>
-                  <p className="text-xl font-bold text-white" style={{ fontFamily: "var(--font-playfair), serif" }}>
+                <div className="border-l border-white/10 pl-2 sm:pl-4">
+                  <p className="text-lg sm:text-xl font-bold text-white" style={{ fontFamily: "var(--font-playfair), serif" }}>
                     4.8★
                   </p>
-                  <p className="text-[0.6875rem] text-white/40 mt-0.5">
+                  <p className="text-[0.625rem] sm:text-[0.6875rem] text-white/50 mt-0.5">
                     Average Rating
                   </p>
                 </div>
-                <div className="w-px h-10 bg-white/10" />
-                <div>
-                  <p className="text-xl font-bold text-white" style={{ fontFamily: "var(--font-playfair), serif" }}>
+                <div className="border-l border-white/10 pl-2 sm:pl-4">
+                  <p className="text-lg sm:text-xl font-bold text-white" style={{ fontFamily: "var(--font-playfair), serif" }}>
                     100%
                   </p>
-                  <p className="text-[0.6875rem] text-white/40 mt-0.5">
-                    Pure Ingredients
+                  <p className="text-[0.625rem] sm:text-[0.6875rem] text-white/50 mt-0.5">
+                    Pure Desi Ghee
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Right — Product Visual Placeholder */}
-            <div className="hidden lg:block">
-              <div className="relative">
-                <div className="aspect-[4/5] bg-white/5 border border-white/10 flex items-center justify-center">
-                  <div className="text-center px-8">
-                    <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-brand-gold/10 flex items-center justify-center">
-                      <span className="text-4xl">✦</span>
-                    </div>
-                    <p
-                      className="text-white/60 text-lg"
-                      style={{ fontFamily: "var(--font-playfair), serif" }}
-                    >
-                      Hero Product Photography
-                    </p>
-                    <p className="text-white/30 text-xs mt-2 max-w-xs mx-auto">
-                      Replace with premium product photography — styled laddu box
-                      or gift hamper on elegant Indian-inspired surface
-                    </p>
+            {/* Right — Hero Product Visual (Responsive on both Mobile & Desktop) */}
+            <div className="block mt-6 lg:mt-0">
+              <div className="relative mx-auto max-w-lg lg:max-w-none">
+                <div className="aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/5] bg-black/40 border border-brand-gold/20 overflow-hidden shadow-2xl relative group">
+                  <img
+                    src="/images/banners/hero-banner.jpg"
+                    alt="Jyotiraj Global Royal Dry Fruit & Artisanal Laddu Platter"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-transparent to-transparent lg:hidden" />
+                  <div className="absolute bottom-3 left-4 right-4 lg:hidden text-white/90">
+                    <p className="text-[0.65rem] tracking-[0.2em] uppercase text-brand-gold font-medium">Artisanal Heritage</p>
+                    <p className="text-sm font-serif">Handcrafted with Pure Desi Ghee</p>
                   </div>
                 </div>
-                {/* Decorative gold corner */}
-                <div className="absolute -top-3 -left-3 w-12 h-12 border-l-2 border-t-2 border-brand-gold/30" />
-                <div className="absolute -bottom-3 -right-3 w-12 h-12 border-r-2 border-b-2 border-brand-gold/30" />
+                {/* Decorative gold corners */}
+                <div className="absolute -top-2.5 -left-2.5 w-10 h-10 border-l-2 border-t-2 border-brand-gold/60" />
+                <div className="absolute -bottom-2.5 -right-2.5 w-10 h-10 border-r-2 border-b-2 border-brand-gold/60" />
               </div>
             </div>
           </div>
@@ -184,37 +177,23 @@ function CategoriesSection() {
                 href={`/shop?category=${cat.id}`}
                 className="group block relative overflow-hidden"
               >
-                <div
-                  className={`aspect-[4/3] ${
-                    i === 0 || i === 3 ? "lg:aspect-[4/3]" : "lg:aspect-[4/3]"
-                  } bg-cream relative`}
-                >
-                  {/* Placeholder for category photography */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-charcoal/20 to-transparent z-10" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-3xl lg:text-4xl opacity-30">
-                      {cat.id === "laddus"
-                        ? "🟡"
-                        : cat.id === "dry-fruits"
-                        ? "🥜"
-                        : cat.id === "sweets"
-                        ? "🍬"
-                        : cat.id === "gift-hampers"
-                        ? "🎁"
-                        : cat.id === "festive"
-                        ? "🪔"
-                        : "🏢"}
-                    </span>
-                  </div>
-                  <div className="absolute bottom-0 left-0 right-0 p-4 lg:p-5 z-20">
+                <div className="aspect-[4/3] bg-cream relative overflow-hidden">
+                  <img
+                    src={cat.image}
+                    alt={cat.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal/85 via-charcoal/30 to-black/10 z-10" />
+                  <div className="absolute bottom-0 left-0 right-0 p-3.5 sm:p-5 z-20">
                     <h3
-                      className="text-white text-lg lg:text-xl font-semibold"
+                      className="text-white text-base sm:text-lg lg:text-xl font-semibold leading-tight"
                       style={{ fontFamily: "var(--font-playfair), serif" }}
                     >
                       {cat.name}
                     </h3>
-                    <p className="text-white/60 text-xs mt-1">{cat.description}</p>
-                    <span className="inline-flex items-center gap-1 text-[0.6875rem] text-brand-gold-light font-semibold tracking-wide uppercase mt-2 group-hover:gap-2 transition-all">
+                    <p className="text-white/70 text-[0.7rem] sm:text-xs mt-1 line-clamp-1">{cat.description}</p>
+                    <span className="inline-flex items-center gap-1 text-[0.625rem] sm:text-[0.6875rem] text-brand-gold-light font-semibold tracking-wide uppercase mt-1.5 sm:mt-2 group-hover:gap-2 transition-all">
                       Explore <ArrowRight size={12} />
                     </span>
                   </div>
@@ -307,28 +286,23 @@ function SignatureCampaign() {
     <section className="bg-cream">
       <div className="grid lg:grid-cols-2 min-h-[500px] lg:min-h-[600px]">
         {/* Left — Image */}
-        <div className="relative bg-parchment">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center px-8">
-              <div className="w-20 h-20 mx-auto mb-3 rounded-full bg-brand-gold/10 flex items-center justify-center">
-                <span className="text-3xl">✦</span>
-              </div>
-              <p
-                className="text-text-muted text-lg"
-                style={{ fontFamily: "var(--font-playfair), serif" }}
-              >
-                Product Close-Up Photography
-              </p>
-              <p className="text-text-muted/50 text-xs mt-2 max-w-xs mx-auto">
-                Large, editorial-style close-up of the signature dry fruit laddu
-                or premium collection packaging
-              </p>
-            </div>
+        <div className="relative bg-parchment min-h-[320px] sm:min-h-[400px] lg:min-h-[500px] overflow-hidden">
+          <img
+            src="/images/products/dry-fruit-laddu.jpg"
+            alt="Artisanal Dry Fruit Laddu Close-Up"
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent lg:hidden" />
+          <div className="absolute bottom-4 left-4 right-4 lg:hidden">
+            <span className="px-3 py-1 bg-brand-burgundy text-white text-[0.625rem] font-semibold tracking-wider uppercase">
+              Artisanal Handcraft
+            </span>
           </div>
         </div>
 
         {/* Right — Content */}
-        <div className="flex items-center px-8 lg:px-16 xl:px-20 py-16 lg:py-0">
+        <div className="flex items-center px-6 sm:px-10 lg:px-16 xl:px-20 py-12 lg:py-0">
           <Reveal>
             <div className="max-w-md">
               <p className="section-label">The Signature Collection</p>
@@ -463,29 +437,13 @@ function IngredientsSection() {
           {ingredients.map((ingredient, i) => (
             <Reveal key={ingredient.name} delay={i * 60}>
               <div className="min-w-[180px] lg:min-w-[200px] snap-start">
-                <div className="aspect-square bg-cream flex items-center justify-center">
-                  <div className="text-center px-4">
-                    <p className="text-3xl mb-2 opacity-40">
-                      {ingredient.name.includes("Almond")
-                        ? "🌰"
-                        : ingredient.name.includes("Cashew")
-                        ? "🥜"
-                        : ingredient.name.includes("Pistachio")
-                        ? "🟢"
-                        : ingredient.name.includes("Date")
-                        ? "🫘"
-                        : ingredient.name.includes("Saffron")
-                        ? "🌸"
-                        : ingredient.name.includes("Cardamom")
-                        ? "🌿"
-                        : ingredient.name.includes("Raisin")
-                        ? "🍇"
-                        : "🧈"}
-                    </p>
-                    <p className="text-[0.6rem] text-text-muted uppercase tracking-wider">
-                      Photo
-                    </p>
-                  </div>
+                <div className="aspect-square bg-cream relative overflow-hidden">
+                  <img
+                    src={ingredient.image}
+                    alt={ingredient.name}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
                 </div>
                 <h4 className="text-sm font-semibold text-charcoal mt-3">
                   {ingredient.name}
@@ -510,23 +468,17 @@ function BrandStorySection() {
     <section className="relative overflow-hidden">
       <div className="grid lg:grid-cols-2 min-h-[500px]">
         {/* Left — Visual */}
-        <div className="relative bg-brand-burgundy/5 order-2 lg:order-1">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center px-8">
-              <div className="w-20 h-20 mx-auto mb-3 rounded-full bg-brand-burgundy/10 flex items-center justify-center">
-                <span className="text-3xl">📖</span>
-              </div>
-              <p
-                className="text-text-muted text-lg"
-                style={{ fontFamily: "var(--font-playfair), serif" }}
-              >
-                Brand Story Photography
-              </p>
-              <p className="text-text-muted/50 text-xs mt-2 max-w-xs mx-auto">
-                Founder, family, production or packaging photography that
-                communicates the brand&apos;s heritage
-              </p>
-            </div>
+        <div className="relative bg-brand-burgundy/5 min-h-[320px] sm:min-h-[400px] lg:min-h-[500px] overflow-hidden order-1 lg:order-1">
+          <img
+            src="/images/banners/heritage-craft.jpg"
+            alt="Artisanal Heritage Cooking at Jyotiraj Global"
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-transparent to-transparent" />
+          <div className="absolute bottom-4 left-5 right-5 text-white">
+            <p className="text-[0.625rem] tracking-[0.25em] uppercase text-brand-gold font-semibold">Artisanal Craft</p>
+            <p className="text-base font-serif">Slow-Roasted in Pure Desi Ghee</p>
           </div>
         </div>
 
@@ -657,18 +609,18 @@ function CraftsmanshipSection() {
    ====================================================================== */
 function GiftingSection() {
   const giftCategories = [
-    { title: "Festive Gifting", image: "🪔", desc: "Diwali, Holi, Rakhi & more" },
-    { title: "Wedding Gifting", image: "💐", desc: "Elegant gifts for the big day" },
-    { title: "Corporate Gifting", image: "🏢", desc: "For teams and clients" },
-    { title: "Family Gifting", image: "🏠", desc: "Share the love" },
-    { title: "Premium Hampers", image: "🎁", desc: "Curated luxury hampers" },
+    { title: "Festive Gifting", image: "/images/categories/festive.jpg", desc: "Diwali, Holi, Rakhi & more" },
+    { title: "Wedding Gifting", image: "/images/products/kaju-katli.jpg", desc: "Elegant gifts for the big day" },
+    { title: "Corporate Gifting", image: "/images/products/corporate-hamper.jpg", desc: "For teams and clients" },
+    { title: "Family Gifting", image: "/images/products/besan-laddu.jpg", desc: "Share the love" },
+    { title: "Premium Hampers", image: "/images/products/gift-hamper.jpg", desc: "Curated luxury hampers" },
   ];
 
   return (
     <section className="section-padding bg-ivory">
       <div className="container-brand">
         <Reveal>
-          <div className="text-center mb-12 lg:mb-14">
+          <div className="text-center mb-10 lg:mb-14">
             <p className="section-label">Gifting</p>
             <h2 className="section-title">Make Every Celebration Sweeter.</h2>
             <p className="section-subtitle mx-auto mt-3">
@@ -678,16 +630,21 @@ function GiftingSection() {
           </div>
         </Reveal>
 
-        <div className="grid grid-cols-2 lg:grid-cols-5 gap-3 lg:gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 lg:gap-4">
           {giftCategories.map((cat, i) => (
             <Reveal key={cat.title} delay={i * 80}>
               <Link href="/gifting" className="group block">
-                <div className="aspect-[3/4] bg-cream relative overflow-hidden flex items-center justify-center">
-                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-charcoal/10 to-transparent z-10" />
-                  <span className="text-4xl opacity-30">{cat.image}</span>
-                  <div className="absolute bottom-0 left-0 right-0 p-4 z-20">
-                    <h3 className="text-white text-sm font-semibold">{cat.title}</h3>
-                    <p className="text-white/50 text-xs mt-0.5">{cat.desc}</p>
+                <div className="aspect-[3/4] bg-cream relative overflow-hidden">
+                  <img
+                    src={cat.image}
+                    alt={cat.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal/85 via-charcoal/30 to-transparent z-10" />
+                  <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 z-20">
+                    <h3 className="text-white text-xs sm:text-sm font-semibold">{cat.title}</h3>
+                    <p className="text-white/70 text-[0.6875rem] sm:text-xs mt-0.5 line-clamp-1">{cat.desc}</p>
                   </div>
                 </div>
               </Link>
@@ -770,20 +727,17 @@ function CorporateGiftingSection() {
         </div>
 
         {/* Right — Visual */}
-        <div className="relative bg-brand-deep flex items-center justify-center">
-          <div className="text-center px-8">
-            <div className="w-20 h-20 mx-auto mb-3 rounded-full bg-white/5 flex items-center justify-center">
-              <span className="text-3xl">🏢</span>
-            </div>
-            <p
-              className="text-white/40 text-lg"
-              style={{ fontFamily: "var(--font-playfair), serif" }}
-            >
-              Corporate Gifting Photography
-            </p>
-            <p className="text-white/20 text-xs mt-2 max-w-xs mx-auto">
-              Premium corporate hampers with branded packaging
-            </p>
+        <div className="relative bg-brand-deep min-h-[300px] sm:min-h-[380px] lg:min-h-[450px] overflow-hidden">
+          <img
+            src="/images/products/corporate-hamper.jpg"
+            alt="Bespoke Executive Corporate Gifting Box"
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent lg:hidden" />
+          <div className="absolute bottom-4 left-4 right-4 lg:hidden text-white">
+            <p className="text-[0.625rem] tracking-[0.2em] uppercase text-brand-gold font-semibold">Custom Branding</p>
+            <p className="text-sm font-serif">Executive Gifting Hampers</p>
           </div>
         </div>
       </div>
@@ -829,13 +783,19 @@ function SeasonalCampaign() {
               </div>
 
               {/* Image */}
-              <div className="relative bg-parchment flex items-center justify-center min-h-[250px]">
-                <div className="text-center px-8">
-                  <span className="text-5xl opacity-30">🪔</span>
-                  <p className="text-text-muted/60 text-xs mt-3 max-w-xs mx-auto">
-                    Festive campaign photography — replace with seasonal
-                    creative
-                  </p>
+              <div className="relative bg-parchment min-h-[260px] sm:min-h-[320px] overflow-hidden">
+                <img
+                  src="/images/banners/hero-banner.jpg"
+                  alt="Festive Diwali Sweets & Dry Fruits Collection"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-transparent to-transparent" />
+                <div className="absolute bottom-4 left-5 right-5 text-white">
+                  <span className="px-2.5 py-0.5 bg-brand-saffron text-white text-[0.625rem] font-semibold tracking-wider uppercase">
+                    Festive Edition
+                  </span>
+                  <p className="text-base font-serif mt-1">Royal Gifting Collection</p>
                 </div>
               </div>
             </div>
@@ -870,7 +830,7 @@ function ReviewsSection() {
                 className="mx-auto text-brand-gold/30 mb-6"
               />
               <p
-                className="text-lg lg:text-xl text-charcoal leading-relaxed"
+                className="text-base sm:text-lg lg:text-xl text-charcoal leading-relaxed"
                 style={{ fontFamily: "var(--font-playfair), serif" }}
               >
                 &ldquo;{reviews[activeIndex].text}&rdquo;
@@ -919,21 +879,28 @@ function ReviewsSection() {
    13. INSTAGRAM
    ====================================================================== */
 function InstagramSection() {
-  const posts = Array.from({ length: 6 }, (_, i) => i);
+  const instagramImages = [
+    { src: "/images/products/dry-fruit-laddu.jpg", alt: "Dry Fruit Laddu" },
+    { src: "/images/products/kaju-katli.jpg", alt: "Kaju Katli" },
+    { src: "/images/products/mixed-nuts.jpg", alt: "Royal Mixed Nuts" },
+    { src: "/images/products/besan-laddu.jpg", alt: "Besan Laddu" },
+    { src: "/images/products/gift-hamper.jpg", alt: "Luxury Gift Hamper" },
+    { src: "/images/products/motichoor-laddu.jpg", alt: "Motichoor Laddu" },
+  ];
 
   return (
     <section className="section-padding bg-ivory">
       <div className="container-brand">
         <Reveal>
-          <div className="text-center mb-10 lg:mb-12">
+          <div className="text-center mb-8 sm:mb-12">
             <p className="section-label">Follow Us</p>
             <h2 className="section-title">From Our Kitchen to Your Feed</h2>
           </div>
         </Reveal>
 
-        <div className="grid grid-cols-3 lg:grid-cols-6 gap-2 lg:gap-3">
-          {posts.map((i) => (
-            <Reveal key={i} delay={i * 60}>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 lg:gap-3">
+          {instagramImages.map((post, i) => (
+            <Reveal key={post.alt} delay={i * 60}>
               <a
                 href="https://www.instagram.com/jyotirajglobal/"
                 target="_blank"
@@ -941,10 +908,13 @@ function InstagramSection() {
                 className="block group"
               >
                 <div className="aspect-square bg-cream relative overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-2xl opacity-20">📸</span>
-                  </div>
-                  <div className="absolute inset-0 bg-brand-burgundy/0 group-hover:bg-brand-burgundy/40 transition-colors flex items-center justify-center">
+                  <img
+                    src={post.src}
+                    alt={post.alt}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-brand-burgundy/0 group-hover:bg-brand-burgundy/60 transition-colors flex items-center justify-center">
                     <span className="text-white text-xs font-semibold opacity-0 group-hover:opacity-100 tracking-wider uppercase transition-opacity">
                       View
                     </span>
