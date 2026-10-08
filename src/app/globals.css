@@ -1,0 +1,363 @@
+@import "tailwindcss";
+
+/* ============================================
+   JYOTIRAJ GLOBAL — DESIGN SYSTEM
+   Premium Indian Food & Gifting Brand
+   ============================================ */
+
+@theme inline {
+  /* Brand Colors */
+  --color-brand-burgundy: #6B1D2A;
+  --color-brand-maroon: #8B2240;
+  --color-brand-wine: #5C1A28;
+  --color-brand-deep: #3D0F1A;
+  --color-brand-saffron: #D4922A;
+  --color-brand-gold: #C6A55A;
+  --color-brand-gold-light: #E0D0A0;
+  --color-brand-gold-muted: #B8A070;
+
+  /* Neutrals */
+  --color-ivory: #FAF6F0;
+  --color-cream: #F5EDE0;
+  --color-warm-white: #FEFCF8;
+  --color-parchment: #F0E8D8;
+  --color-sand: #E8DCC8;
+  --color-charcoal: #2C2420;
+  --color-brown-deep: #3A2E28;
+  --color-brown-medium: #5C4A3E;
+  --color-brown-light: #8B7560;
+  --color-text-primary: #2C2420;
+  --color-text-secondary: #5C4A3E;
+  --color-text-muted: #8B7560;
+  --color-border-light: #E8DCC8;
+  --color-border-medium: #D4C8B0;
+
+  /* Fonts */
+  --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-body: "DM Sans", "Segoe UI", system-ui, sans-serif;
+
+  /* Container */
+  --container-max: 1320px;
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--color-ivory);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+::selection {
+  background-color: var(--color-brand-burgundy);
+  color: #fff;
+}
+
+/* ============================================
+   TYPOGRAPHY UTILITIES
+   ============================================ */
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* ============================================
+   SECTION SPACING
+   ============================================ */
+
+.section-padding {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+}
+
+/* ============================================
+   CONTAINER
+   ============================================ */
+
+.container-brand {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .container-brand {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container-brand {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  background-color: var(--color-brand-burgundy);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-brand-deep);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  background-color: transparent;
+  color: var(--color-brand-burgundy);
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1.5px solid var(--color-brand-burgundy);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-brand-burgundy);
+  color: #fff;
+}
+
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  background-color: var(--color-brand-saffron);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+  background-color: #be8220;
+}
+
+/* ============================================
+   SECTION HEADINGS
+   ============================================ */
+
+.section-label {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-brand-saffron);
+  margin-bottom: 0.75rem;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-text-primary);
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-title {
+    font-size: 2.75rem;
+  }
+}
+
+.section-subtitle {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  max-width: 560px;
+}
+
+/* ============================================
+   DIVIDER
+   ============================================ */
+
+.gold-divider {
+  width: 48px;
+  height: 2px;
+  background-color: var(--color-brand-gold);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* ============================================
+   PRODUCT CARD
+   ============================================ */
+
+.product-card {
+  position: relative;
+  background: var(--color-warm-white);
+  border: 1px solid var(--color-border-light);
+  transition: border-color 0.3s ease;
+}
+
+.product-card:hover {
+  border-color: var(--color-brand-gold-muted);
+}
+
+.product-card .product-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  background: var(--color-cream);
+}
+
+.product-card .product-image-wrapper img {
+  transition: transform 0.6s ease;
+}
+
+.product-card:hover .product-image-wrapper img {
+  transform: scale(1.05);
+}
+
+/* ============================================
+   CUSTOM SCROLLBAR
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-brand-gold-muted);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-burgundy);
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.6s ease forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* ============================================
+   MEGA MENU
+   ============================================ */
+
+.mega-menu {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: all 0.3s ease;
+}
+
+.nav-item:hover .mega-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* ============================================
+   RATING STARS
+   ============================================ */
+
+.star-filled {
+  color: var(--color-brand-saffron);
+}
+
+.star-empty {
+  color: var(--color-sand);
+}
